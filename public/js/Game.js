@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -6,7 +6,6 @@
 var ctx;
 var imageObj = new Image();
 function Game() {
-    fps = 60;
 }
 
 Game.prototype.start = function(ctx) {
@@ -19,7 +18,8 @@ Game.prototype.start = function(ctx) {
 
 Game.prototype.startLoop =  function(){
     
-    ctx.fillStyle="#0000FF";
+    ctx.fillStyle='#0000FF';
+    console.log('loop', ctx.width);
     ctx.fillRect(0,0,1000,600);
 
     ctx.drawImage(imageObj, 69, 50);
