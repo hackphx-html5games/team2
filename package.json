@@ -1,0 +1,35 @@
+{
+  "name": "team2",
+  "subdomain": "asteroids",
+  "version": "0.0.0",
+  "description": "Asteroids MMO.",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node lib/app.js",
+    "test": "mocha -R spec test/*-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hackphx-html5games/team2.git"
+  },
+  "keywords": [
+    "game",
+    "multiplayer",
+    "asteroids",
+    "mmo"
+  ],
+  "author": "team2",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "express": "~3.0.3",
+    "mongoose": "~3.4.0",
+    "passport": "~0.1.15",
+    "passport-twitter": "~0.1.4",
+    "socket.io": "~0.9.11",
+    "request": "~2.12.0"
+  },
+  "engines": {
+    "node": "0.8"
+  }
+}
