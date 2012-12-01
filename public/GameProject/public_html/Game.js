@@ -17,9 +17,6 @@ Game.prototype.start = function(ctx) {
   //this.startLoop();
 };
 
-
-
-
 Game.prototype.startLoop =  function(){
     
     ctx.fillStyle="#0000FF";
@@ -30,7 +27,6 @@ Game.prototype.startLoop =  function(){
        // alert("loop");
        // ctx.fillStyle="#00FFFF";
        // ctx.fillRect(Game.player.x,Game.player.y,10,10);
-    
 };
 Game.prototype.draw = function() {
   //Game.player.draw(Game.context);
