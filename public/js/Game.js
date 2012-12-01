@@ -13,7 +13,7 @@ Game.prototype.start = function(ctx) {
   // alert("load");
   Game.player = new Player();
   this.ctx = ctx;
-  imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+  imageObj.src = './images/wall.png';
   //this.startLoop();
 };
 
