@@ -14,7 +14,6 @@ function Player() {
 }
 
 Player.prototype.draw = function(context) {
-  this.update()
    // alert("left------------");
   ctx.fillStyle="#00FFFF";
   context.fillRect(this.x, this.y, 16, 32);
