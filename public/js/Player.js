@@ -4,7 +4,7 @@
  */
 
 function Player() {
-  this.x = 100;
+  this.x = 300;
   this.y = 100;
 }
 
