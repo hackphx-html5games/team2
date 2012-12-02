@@ -10,11 +10,7 @@
     game = new Game();
     game.start(ctx);
     
-    ctx.fillStyle="#0000FF";
-    ctx.fillRect(0,0,1400,600);
    
-    ctx.fillStyle="#FF0000";
-    ctx.fillRect(0,0,300,600);
     
     /*ctx.fillStyle="#00ff00";
     ctx.fillRect(1100,0,300,600);*/
@@ -29,7 +25,7 @@ window.addEventListener('keydown', function(event) {
       Game.projectiles.push(Game.player.shoot());
       
     case 37: // Left
-        //alert("left");
+        alert("left");
        Game.player.moveLeft();
     break;
 

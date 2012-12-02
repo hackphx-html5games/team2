@@ -14,9 +14,9 @@ var projectiles = new Array();
  }
  
  Game.prototype.start = function(ctx) {
-    // alert("load");
+     alert("load");
  Game.player = new Player();
- Game.player = new Player(this.wall1_x, this.wall2_x);
+ //Game.player = new Player(this.wall1_x, this.wall2_x);
  this.ctx = ctx;
 
   image_wall.src = './images/wall.png';
@@ -39,7 +39,7 @@ ctx.drawImage(image_bg, 0, 0);
         delete projectiles[i];
       }
     }
-  }
+  };
  Game.player.draw(ctx);
        // alert("loop");
         // ctx.fillStyle="#00FFFF";
@@ -48,7 +48,7 @@ ctx.drawImage(image_bg, 0, 0);
   };
   Game.prototype.draw = function() {
    //Game.player.draw(Game.context);
-  }
+  };
 
 Game.prototype.addProjectile = function(bullet) {
   // body...
