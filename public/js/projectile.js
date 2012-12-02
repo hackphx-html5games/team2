@@ -4,7 +4,7 @@ function projectile(x, y, rot, speed) {
   this.x = y;
   this.y = x;
   this.rot = rot;
-  this.speed = speed * 4;
+  this.speed = speed + 4;
   this.duration = 0;
   this.maxDuration = 2;
 }

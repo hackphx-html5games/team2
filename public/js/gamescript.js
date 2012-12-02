@@ -25,6 +25,9 @@
 
 window.addEventListener('keydown', function(event) {
   switch (event.keyCode) {
+    case 32: //space bar
+      Game.projectiles.push(Game.player.shoot());
+      
     case 37: // Left
         //alert("left");
        Game.player.moveLeft();

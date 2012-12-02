@@ -6,6 +6,7 @@
 function Player() {
   this.x = 300;
   this.y = 100;
+  this.rot = 0;
 }
 
 Player.prototype.draw = function(context) {
@@ -29,4 +30,10 @@ Player.prototype.moveUp = function() {
 
 Player.prototype.moveDown = function() {
   this.y += 5;
+};
+
+Player.prototype.shoot = function() {
+	// body...
+	var bullet = new projectile(this.x, this.y, this.rot, this.speed);
+	return bullet;
 };
