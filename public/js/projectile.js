@@ -20,8 +20,8 @@ Projectile.prototype.draw = function(context) {
 };
 
 Projectile.prototype.update = function(elapsedTime) {
-	this.x = this.xspeed * elapsedTime * Math.cos(this.rot);
-	this.y = this.yspeed * elapsedTime * Math.sin(this.rot);
+	this.x = this.xspeed * elapsedTime * Math.cos(this.rot*Math.PI/180);
+	this.y = this.yspeed * elapsedTime * Math.sin(this.rot*Math.PI/180);
 	this.duration += elapsedTime / 1000;
 };
 
