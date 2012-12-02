@@ -9,8 +9,8 @@ function Player() {
   this.isLeft = true;
   this.forward = 0;
   this.reverse = 0;
-  this.x = 100;
-  this.y = 100;
+  this.x = 300;
+  this.y = 300;
   this.rot = 0;
   this.speed = 0;
   this.radius = 0;
@@ -22,23 +22,21 @@ Player.prototype.draw = function(context) {
   //ctx.fillStyle="#00FFFF";
   //context.fillRect(this.x, this.y, 16, 32);
   ctx.save();
-  ctx.translate(-image_ship.width/2, -image_ship.height/2);
+  //ctx.translate(-image_ship.width/2, -image_ship.height/2);
+  ctx.translate(this.x + image_ship.width/2, this.y + image_ship.height/2);
   ctx.rotate(this.rot);
-
-  ctx.translate(-this.x, -this.y);
  // ctx.translate(image_ship.width, image_ship.height)
-
-  ctx.drawImage(image_ship, 0, 0);
+  ctx.drawImage(image_ship, -image_ship.width/2, -image_ship.height/2);
   ctx.restore();
 };
 
 Player.prototype.moveLeft = function() {
-  this.rot -= 3;
+  this.rot -= 1;
 
 };
 
 Player.prototype.moveRight = function() {
-  this.rot +=  3;
+  this.rot +=  1;
  };
 
 Player.prototype.moveUp = function() {
