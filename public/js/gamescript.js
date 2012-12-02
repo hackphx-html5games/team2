@@ -25,7 +25,7 @@ window.addEventListener('keydown', function(event) {
       Game.projectiles.push(Game.player.shoot());
       break;
     case 37: // Left
-        alert("left");
+        //alert("left");
        Game.player.moveLeft();
     break;
 

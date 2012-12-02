@@ -4,24 +4,26 @@
  */
 
 function Player() {
+  this.isLeft = true;
   this.x = 300;
   this.y = 100;
   this.rot = 0;
 }
 
 Player.prototype.draw = function(context) {
+  this.update()
    // alert("left------------");
   ctx.fillStyle="#00FFFF";
   context.fillRect(this.x, this.y, 32, 32);
 };
 
 Player.prototype.moveLeft = function() {
- // alert("left------------");
-  this.x -= 5;
+  this.isLeft = true;
+
 };
 
 Player.prototype.moveRight = function() {
-  this.x +=5; 
+  this.isLeft =  false;
  };
 
 Player.prototype.moveUp = function() {
@@ -38,3 +40,13 @@ Player.prototype.shoot = function() {
     this.xspeed, this.yspeed, this.rot);
 	return bullet;
 };
+Player.prototype.update = function(){
+     if(this.isLeft == true){
+      if(this.x > 130){
+       this.x -= 1;
+      }
+     }else{
+      if(this.x < 900-60)
+      this.x += 1;
+     }
+ };
