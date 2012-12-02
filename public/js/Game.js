@@ -1,3 +1,4 @@
+
 var ctx;
 
 var image_wall = new Image();
@@ -31,14 +32,8 @@ ctx.drawImage(image_bg, 0, 0);
   ctx.drawImage(image_wall, 100, 350);
   ctx.drawImage(image_wall, 900-30, 0);
   ctx.drawImage(image_wall, 900-30, 350);
-  Game.updateProjectiles();
-  for(var i = 0; 0 < projectiles.length; i++) {
-    projectiles[i].update();
-      if (projectiles[i].duration < projectiles[i].maxDuration) {
-        delete projectiles[i];
-      }
-    }
-  }
+
+
  Game.player.draw(ctx);
        // alert("loop");
         // ctx.fillStyle="#00FFFF";
