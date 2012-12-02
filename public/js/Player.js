@@ -9,10 +9,11 @@ function Player() {
   this.isLeft = true;
   this.forward = 0;
   this.reverse = 0;
-  this.x = 200;
-  this.y = 200;
+  this.x = 100;
+  this.y = 100;
   this.rot = 0;
   this.speed = 0;
+  this.radius = 0;
   image_ship.src = './images/ship.png';
 }
 
@@ -20,7 +21,15 @@ Player.prototype.draw = function(context) {
    // alert("left------------");
   //ctx.fillStyle="#00FFFF";
   //context.fillRect(this.x, this.y, 16, 32);
-  ctx.drawImage(image_ship, this.x, this.y);
+  ctx.save();
+  ctx.translate(-image_ship.width/2, -image_ship.height/2);
+  ctx.rotate(this.rot);
+
+  ctx.translate(-this.x, -this.y);
+ // ctx.translate(image_ship.width, image_ship.height)
+
+  ctx.drawImage(image_ship, 0, 0);
+  ctx.restore();
 };
 
 Player.prototype.moveLeft = function() {
@@ -33,11 +42,11 @@ Player.prototype.moveRight = function() {
  };
 
 Player.prototype.moveUp = function() {
-  this.speed += 5;
+  this.radius += 5;
 };
 
 Player.prototype.moveDown = function() {
-  this.speed -= 5;
+  this.radius -= 5;
 };
 
 Player.prototype.shoot = function() {
@@ -55,6 +64,6 @@ Player.prototype.update = function(){
       if(this.x < 900-60)
       this.x += 1;
      }*/
-	this.x = this.xspeed * Math.cos(this.rot*Math.PI/180);
-	this.y = this.yspeed * Math.sin(this.rot*Math.PI/180);
+	this.x = this.radius * Math.cos(this.rot*Math.PI/180);
+	this.y = this.radius * Math.sin(this.rot*Math.PI/180);
  };
