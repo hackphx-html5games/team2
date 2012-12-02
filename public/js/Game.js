@@ -1,9 +1,8 @@
-
 var ctx;
 
 var image_wall = new Image();
 var image_bg = new Image();
-var projectiles = new Array();
+var projectiles = [];
  function Game() {
 
   fps = 60;
