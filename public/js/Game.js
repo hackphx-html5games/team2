@@ -48,5 +48,9 @@ ctx.drawImage(image_bg, 0, 0);
   };
   Game.prototype.draw = function() {
    //Game.player.draw(Game.context);
-}
+  }
 
+Game.prototype.addProjectile = function(bullet) {
+  // body...
+  projectiles.push(bullet);
+};
