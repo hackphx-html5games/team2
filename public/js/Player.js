@@ -6,6 +6,7 @@
 function Player() {
   this.x = 300;
   this.y = 100;
+  this.rot = 0;
 }
 
 Player.prototype.draw = function(context) {
