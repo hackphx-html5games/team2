@@ -17,11 +17,13 @@ socket.on('spawn', function(userid, position) {
 });
 
 
-socket.on('disconnect', function(userid} {
+socket.on('disconnect', function(userid) {
 });
 
 
 socket.on('shoot', function(userid, x, y, xspeed, yspeed, angle) {
+  // Currently ignoring the player that shot it.
+  new Projectile(x, y, xspeed, yspeed, angle);
 });
 
 

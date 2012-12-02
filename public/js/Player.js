@@ -33,6 +33,7 @@ Player.prototype.moveDown = function() {
 
 Player.prototype.shoot = function() {
 	// body...
-	var bullet = new projectile(this.x, this.y, this.rot, this.speed);
+	var bullet = new projectile(this.x, this.y,
+    this.xspeed, this.yspeed, this.rot);
 	return bullet;
 };
