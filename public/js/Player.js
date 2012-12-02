@@ -2,6 +2,8 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+var image_ship = new Image();
+
 
 function Player() {
   this.isLeft = true;
@@ -11,12 +13,14 @@ function Player() {
   this.y = 200;
   this.rot = 0;
   this.speed = 0;
+  image_ship.src = './images/ship.png';
 }
 
 Player.prototype.draw = function(context) {
    // alert("left------------");
-  ctx.fillStyle="#00FFFF";
-  context.fillRect(this.x, this.y, 16, 32);
+  //ctx.fillStyle="#00FFFF";
+  //context.fillRect(this.x, this.y, 16, 32);
+  ctx.drawImage(image_ship, this.x, this.y);
 };
 
 Player.prototype.moveLeft = function() {
